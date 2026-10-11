@@ -1,0 +1,7 @@
+# backups automaticos do PSIM e intermediarios
+* (backup)*.psimsch
+chnpc_pre_*.psimsch
+
+# resultados de simulacao
+*.smv
+*.csv
