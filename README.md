@@ -15,10 +15,10 @@ inversor multinível **CHB-NPC**, simulado no **Altair PSIM 2026.1**.
 
 | Arquivo | O que faz |
 |---|---|
-| `chnpc.psimsch` | Comissionamento: ensaio parado (CC + PRBS no eixo α) com RLS online (só visualização) e **SRIVC** em lote no fim (float32, discretização exata, soma de Kahan); depois ensaio a vazio V/f para verificar LM |
-| `chnpc_rivc_recursivo.psimsch` | Comissionamento só com **RIVC recursivo** (pré-filtro fixo, modelo auxiliar atualizado a cada 50 ms), sem buffers |
-| `chnpc_foc_sensorless.psimsch` | **FOC sensorless**: observador de fluxo de ordem reduzida com adaptação de Rs (Hinkkanen, Harnefors & Luomi, IEEE TPEL 2010), controle de corrente IMC, PI de velocidade, carga ativa `MLOAD_EXT` |
-| `chnpc_orig.psimsch` | Esquemático de partida |
+| `chb_npc_comissionamento_srivc.psimsch` | Comissionamento: ensaio parado (CC + PRBS no eixo α) com RLS online (só visualização) e **SRIVC** em lote no fim (float32, discretização exata, soma de Kahan); depois ensaio a vazio V/f para verificar LM |
+| `chb_npc_comissionamento_rivc_recursivo.psimsch` | Comissionamento só com **RIVC recursivo** (pré-filtro fixo, modelo auxiliar atualizado a cada 50 ms), sem buffers |
+| `chb_npc_foc_sensorless_hinkkanen.psimsch` | **FOC sensorless**: observador de fluxo de ordem reduzida com adaptação de Rs (Hinkkanen, Harnefors & Luomi, IEEE TPEL 2010), controle de corrente IMC, PI de velocidade, carga ativa `MLOAD_EXT` |
+| `chb_npc_esquematico_original.psimsch` | Esquemático de partida |
 
 O código de controle de cada simulação está no bloco C `SCB1` do respectivo esquemático.
 Simulação com passo de 1 µs, tempo total de 5 s e print step 50.
